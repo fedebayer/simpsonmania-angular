@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Chapter</th>
+      <th>Season</th>
+      <th>Premiere</th>
+      <th>Screenwriter</th>
+      <th>Director</th>
+      <th>Gag</th>
+      <th>Recent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let chapter of chapters"
+      [ngClass]="{'screenwriter-remark': chapter.screenwriter == 'John Swartzwelder'}">
+      <td><img [src]="chapter.image" [alt]="chapter.name" width="70%"></td>
+      <td>{{chapter.name}}</td>
+      <td>{{chapter.season}}</td>
+      <td>{{chapter.premiere}}</td>
+      <td>{{chapter.screenwriter}}</td>
+      <td>{{chapter.director}}</td>
+      <td>{{chapter.gag | lowercase}}</td>
+      <td><span class="badge bg-success" *ngIf="chapter.season >= startPointForNewSeasons">Recent</span></td>
+    </tr>
+  </tbody>
+</table>
