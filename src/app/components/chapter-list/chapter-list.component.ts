@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chapter } from 'src/app/model/chapter';
+import { ChapterScoresService } from 'src/app/services/chapter-scores.service';
 
 @Component({
   selector: 'app-chapter-list',
@@ -55,20 +56,16 @@ export class ChapterListComponent implements OnInit {
   ];
 
   startPointForNewSeasons = 30;
-  constructor() {}
+
+  constructor(private chapterScores: ChapterScoresService) {}
 
   ngOnInit(): void {}
 
-  upScore(chapter: Chapter): void {
-    if (chapter.score <= 9) chapter.score++;
+  addToChapterScores(chapter: Chapter): void {
+    this.chapterScores.addToChapterScores(chapter);
   }
 
-  downScore(chapter: Chapter): void {
-    if (chapter.score >= 1) chapter.score--;
-  }
-
-  onChangeScore(event: KeyboardEvent, chapter: Chapter): void {
-    if (event.key < '0' && event.key > '10' && event.key + chapter.score > '10')
-      event.preventDefault();
+  maxReached(m: String) {
+    alert(m);
   }
 }

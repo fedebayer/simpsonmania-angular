@@ -10,6 +10,7 @@
       <th>Director</th>
       <th>Gag</th>
       <th>Recent</th>
+      <th>Punctuation</th>
       <th>Score</th>
     </tr>
   </thead>
@@ -25,13 +26,10 @@
       <td>{{chapter.gag | lowercase}}</td>
       <td><span class="badge bg-success" *ngIf="chapter.season >= startPointForNewSeasons">Recent</span></td>
       <td width="14%">
-        <div class="input-group">
-          <button class="btn btn-primary btn-sm" (click)="downScore(chapter)">-</button>
-          <input type="number" max="10" min="0" disabled="disabled" [(ngModel)]="chapter.score"
-            (keyup)="onChangeScore($event, chapter)">
-          <button class="btn btn-primary btn-sm" (click)="upScore(chapter)">+</button>
-        </div>
+        <app-input-integer [(quantity)]="chapter.score" [max]="10" (maxReached)="maxReached($event)">
+        </app-input-integer>
       </td>
+      <td><button class="btn btn-primary" (click)="addToChapterScores(chapter)">Score</button></td>
     </tr>
   </tbody>
 </table>

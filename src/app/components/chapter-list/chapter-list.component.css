@@ -1,6 +1,6 @@
 .table {
   margin: 0 auto;
-  margin-bottom: 22.4%;
+  margin-bottom: 10%;
 }
 
 
@@ -8,9 +8,7 @@ td {
   vertical-align: middle;
 }
 
-input {
-  max-width: 40px;
-}
+
 
 
 .screenwriter-remark {

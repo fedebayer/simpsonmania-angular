@@ -1,0 +1,10 @@
+<div class="input-group">
+  <div class="input-group-prepend">
+    <button class="btn btn-primary btn-sm" (click)="downScore()">-</button>
+  </div>
+  <input type="number" class="text-center" max="10" min="0" disabled="disabled" [(ngModel)]="quantity"
+    (keyup)="onChangeScore($event)">
+  <div class="input-group-append">
+    <button class="btn btn-primary btn-sm" (click)="upScore()">+</button>
+  </div>
+</div>

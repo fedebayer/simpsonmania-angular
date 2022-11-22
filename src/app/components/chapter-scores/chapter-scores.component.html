@@ -1,0 +1,6 @@
+<h3>Your scored chapters</h3>
+<ul>
+  <li *ngFor="let chapter of chapterScoresList$ | async">
+    {{chapter.name}}: {{chapter.score}}
+  </li>
+</ul>
