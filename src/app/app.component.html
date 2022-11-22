@@ -8,24 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">solo se muda 2 veces</a>
+          <a class="nav-link" [routerLink]="['/soloSeMudaDosVeces']">solo se muda dos veces</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">la casita del horror VIII</a>
+          <a class="nav-link" [routerLink]="['/casitaDelHorrorVII']"> casita del horror VII</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 <div class="container">
-  <div class="row">
-    <div class="col-8">
-      <app-chapter-list></app-chapter-list>
-    </div>
-    <div class="col-4">add-chapter</div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
-<footer><i><b>{{title}} 2022</b></i></footer>
+<footer><i><b>{{title}} 2022 ©</b></i></footer>

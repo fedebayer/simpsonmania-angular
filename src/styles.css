@@ -20,6 +20,11 @@ section, footer {
   word-break: break-word;
 }
 
+nav {
+  margin-bottom: 4rem;
+}
+
+
 body {
   margin: 0;
   background-color: var(--white-color);

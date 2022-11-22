@@ -6,4 +6,5 @@ export interface Chapter {
   director: string;
   gag: string;
   image: string;
+  score: number;
 }
