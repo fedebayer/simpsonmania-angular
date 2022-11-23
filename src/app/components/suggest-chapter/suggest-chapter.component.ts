@@ -1,8 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Chapter } from 'src/app/model/chapter';
-import { ChapterDataService } from 'src/app/services/chapter-data.service';
+import { Chapter } from '../../model/chapter';
+import { ChapterDataService } from '../../services/chapter-data.service';
 
 @Component({
   selector: 'app-suggest-chapter',
@@ -18,7 +18,8 @@ export class SuggestChapterComponent implements OnInit {
     this.chapterDataService.addChapter(addForm.value).subscribe(
       (response: Chapter) => {
         console.log(response);
-        window.location.href = 'http://localhost:4200/chapters';
+        window.location.href = 'https://simpsonmania.stackblitz.io/chapters';
+        /*http://localhost:4200/chapters*/
         addForm.reset();
       },
       (error: HttpErrorResponse) => {

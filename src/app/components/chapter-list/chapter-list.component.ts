@@ -1,8 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Chapter } from 'src/app/model/chapter';
-import { ChapterDataService } from 'src/app/services/chapter-data.service';
-import { ChapterScoresService } from 'src/app/services/chapter-scores.service';
+import { Chapter } from '../../model/chapter';
+import { ChapterDataService } from '../../services/chapter-data.service';
+import { ChapterScoresService } from '../../services/chapter-scores.service';
 
 @Component({
   selector: 'app-chapter-list',

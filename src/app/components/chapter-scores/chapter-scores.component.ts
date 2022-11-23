@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Chapter } from 'src/app/model/chapter';
-import { ChapterScoresService } from 'src/app/services/chapter-scores.service';
+import { Chapter } from '../../model/chapter';
+import { ChapterScoresService } from '../../services/chapter-scores.service';
 
 @Component({
   selector: 'app-chapter-scores',
