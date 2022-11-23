@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chapter } from 'src/app/model/chapter';
+import { ChapterDataService } from 'src/app/services/chapter-data.service';
 import { ChapterScoresService } from 'src/app/services/chapter-scores.service';
 
 @Component({
@@ -57,7 +58,10 @@ export class ChapterListComponent implements OnInit {
 
   startPointForNewSeasons = 30;
 
-  constructor(private chapterScores: ChapterScoresService) {}
+  constructor(
+    private chapterScores: ChapterScoresService,
+    private chapterDataService: ChapterDataService
+  ) {}
 
   ngOnInit(): void {}
 

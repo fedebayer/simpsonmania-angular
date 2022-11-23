@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CasitaDelHorrorVIIComponent } from './components/casita-del-horror-vii/casita-del-horror-vii.component';
+import { Chapter2Season8Component } from './components/chapter-2-season-8/chapter-2-season-8.component';
+import { Chapter4Season9Component } from './components/chapter-4-season-9/chapter-4-season-9.component';
 import { ChaptersPageComponent } from './components/chapters-page/chapters-page.component';
-import { SoloSeMudaDosVecesComponent } from './components/solo-se-muda-dos-veces/solo-se-muda-dos-veces.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'chapters', pathMatch: 'full' },
   { path: 'chapters', component: ChaptersPageComponent },
-  { path: 'soloSeMudaDosVeces', component: SoloSeMudaDosVecesComponent },
-  { path: 'casitaDelHorrorVII', component: CasitaDelHorrorVIIComponent },
+  { path: 'chapter-2-season-8', component: Chapter2Season8Component },
+  { path: 'chapter-4-season-9', component: Chapter4Season9Component },
 ];
 
 @NgModule({
