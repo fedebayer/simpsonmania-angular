@@ -1,15 +1,17 @@
 <h3>Add suggestions of chapters</h3>
 <div class="formSuggestions" id="formSuggestions">
   <p>Chapters by John Swartzwelder will be remarked</p>
-  <form action="" id="entryForm" class="form-group entryForm">
+  <form #addForm="ngForm" action="" id="entryForm" class="form-group entryForm" (ngSubmit)="addChapter(addForm)">
     <div id="input-container" class="form-group">
-      <input type="text" id="title" placeholder="Title" class="form-control">
-      <input type="number" id="season" placeholder="Season" class="form-control">
-      <input type="text" id="premiere" placeholder="Premiere" class="form-control">
-      <input type="text" id="screenwriter" placeholder="Screenwriter" class="form-control">
-      <input type="text" id="director" placeholder="Director" class="form-control">
-      <textarea id="gag" placeholder="Gag" class="form-control"></textarea>
+      <input type="text" id="name" ngModel name="name" placeholder="Title" class="form-control" required>
+      <input type="number" id="season" ngModel name="season" placeholder="Season" class="form-control" required>
+      <input type="text" id="premiere" ngModel name="premiere" placeholder="Premiere" class="form-control" required>
+      <input type="text" id="screenwriter" ngModel name="screenwriter" placeholder="Screenwriter" class="form-control"
+        required>
+      <input type="text" id="director" ngModel name="director" placeholder="Director" class="form-control" required>
+      <input type="text" id="img" ngModel name="image" placeholder="Image" class="form-control">
+      <textarea id="gag" placeholder="Gag" ngModel name="gag" class="form-control"></textarea>
     </div>
-    <input type="submit" class="btn btn-primary" id="btn-suggestions" value="Submit">
+    <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Submit</button>
   </form>
 </div>

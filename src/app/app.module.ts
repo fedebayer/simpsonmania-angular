@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Chapter2Season8Component } from './components/chapter-2-season-8/chapter-2-season-8.component';
@@ -23,7 +24,7 @@ import { SuggestChapterComponent } from './components/suggest-chapter/suggest-ch
     InputIntegerComponent,
     ChapterScoresComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

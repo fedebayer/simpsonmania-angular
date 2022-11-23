@@ -1,4 +1,5 @@
 export interface Chapter {
+  id: number;
   name: string;
   season: number;
   premiere: string;

@@ -17,7 +17,7 @@
   <tbody>
     <tr *ngFor="let chapter of chapters"
       [ngClass]="{'screenwriter-remark': chapter.screenwriter == 'John Swartzwelder'}">
-      <td><img [src]="chapter.image" [alt]="chapter.name" width="70%"></td>
+      <td><img [src]="chapter.image" [alt]="chapter.name" width="120%"></td>
       <td>{{chapter.name}}</td>
       <td>{{chapter.season}}</td>
       <td>{{chapter.premiere}}</td>
@@ -29,7 +29,8 @@
         <app-input-integer [(quantity)]="chapter.score" [max]="10" (maxReached)="maxReached($event)">
         </app-input-integer>
       </td>
-      <td><button class="btn btn-primary" (click)="addToChapterScores(chapter)">Score</button></td>
+      <td><button class="btn btn-primary" (click)="addToChapterScores(chapter)">Score</button><button
+          class="btn btn-danger" (click)="deleteChapter(chapter.id)">Delete</button></td>
     </tr>
   </tbody>
 </table>
