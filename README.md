@@ -1,5 +1,19 @@
 # Simpsonmania
 
+Deployed in StackBlitz
+
+[Link](https://simpsonmania.stackblitz.io/chapters)
+
+## Simpsonmania - chapter list page
+
+The chapters can be added, scored or deleted. There are 2 pages of particular chapters. Includes routing and mock api.
+
+<img src="https://github.com/FedeBayer/simpsonmania-angular/blob/main/src/assets/img/live-page.png?raw=true" width="350" title="simpsonmania page img">
+
+<br />
+<br />
+<br />
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
 ## Development server
